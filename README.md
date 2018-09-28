@@ -1,6 +1,6 @@
 # kaworyuenbbq
-Website for Ka Wor Yuen BBQ [Pro Bono]
 
+Responsive website for Ka Wor Yuen BBQ [Pro Bono]
 
 www.kaworyuenbbq.ca
 
