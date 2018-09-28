@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.side-nav {
+  position: fixed;
+  z-index: 1;
+  background: transparent;
+  padding: 1em; }
+  .side-nav a {
+    color: #FF851B; }
+  .side-nav a:hover {
+    color: white; }
+  .side-nav a:visited {
+    color: #FF851B; }
+
+.page-one {
+  font-family: Garamond;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)) fixed, url("./images/peking-duck2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .page-one h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center; }
+    @media (min-width: 1024px) {
+      .page-one h1 {
+        font-size: 3em; } }
+  .page-one h1::after {
+    content: 'Affordable and delicious';
+    font-style: italic;
+    font-size: .5em;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    padding: 1em 5em;
+    text-transform: capitalize;
+    margin-bottom: 3em; }
+    @media (min-width: 1024px) {
+      .page-one h1::after {
+        margin-bottom: 1em; } }
+  .page-one a {
+    border: 2px solid #FF851B;
+    padding: 1em;
+    color: #FF851B;
+    text-decoration: none;
+    font-size: 1.1em; }
+
+.about {
+  font-family: Garamond;
+  text-align: center;
+  padding: 3em 2em;
+  position: relative; }
+  .about h1 {
+    position: relative;
+    margin-bottom: 1em;
+    font-weight: bold; }
+    @media (min-width: 1440px) {
+      .about h1 {
+        font-size: 3em; } }
+  .about p {
+    padding: 0 2em; }
+    @media (min-width: 1024px) {
+      .about p {
+        font-size: 1.2em;
+        padding: 0 4em; } }
+    @media (min-width: 1440px) {
+      .about p {
+        padding: 0 6em;
+        font-size: 1.5em; } }
+  .about h1::after {
+    content: '';
+    position: absolute;
+    border-top: 1px solid gray;
+    width: 30vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: -1.5em;
+    display: block;
+    margin-top: 0.5em; }
+    @media (min-width: 1024px) {
+      .about h1::after {
+        width: 8vw; } }
+
+.about::after {
+  content: '';
+  margin-top: 1em;
+  border-top: 1px solid gray;
+  position: absolute;
+  width: 30vw;
+  transform: translateX(-50%);
+  left: 50%; }
+  @media (min-width: 1024px) {
+    .about::after {
+      width: 8vw; } }
+
+.photo-grid {
+  display: flex;
+  flex-direction: column;
+  font-family: Garamond;
+  margin-bottom: 2em; }
+  .photo-grid h1 {
+    text-align: center;
+    margin-bottom: .75em;
+    font-weight: bold; }
+    @media (min-width: 1440px) {
+      .photo-grid h1 {
+        font-size: 3em; } }
+  .photo-grid .photo {
+    margin: 0 auto 2em; }
+    .photo-grid .photo img {
+      max-width: 80vw;
+      height: auto;
+      border: 1px solid gray;
+      padding: .25em; }
+      @media (min-width: 1024px) {
+        .photo-grid .photo img {
+          max-width: 50vw; } }
+  .photo-grid .photo:last-child::after {
+    content: '';
+    margin-top: 2.5em;
+    border-top: 1px solid gray;
+    position: absolute;
+    width: 30vw;
+    transform: translateX(-50%);
+    left: 50%; }
+    @media (min-width: 1024px) {
+      .photo-grid .photo:last-child::after {
+        width: 8vw; } }
+
+.menu-container {
+  font-family: Garamond;
+  margin: 0 2em; }
+  .menu-container h1 {
+    margin-bottom: .5em;
+    text-align: center;
+    font-weight: bold; }
+    @media (min-width: 1440px) {
+      .menu-container h1 {
+        font-size: 3em; } }
+  @media (min-width: 1440px) {
+    .menu-container {
+      font-size: 1.4em;
+      margin: 0 5em; } }
+  .menu-container .menu .item-header {
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    color: #FF851B;
+    text-align: center;
+    border: 1px solid #FF851B; }
+  .menu-container .menu .combos {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: .5em; }
+    @media (min-width: 1024px) {
+      .menu-container .menu .combos {
+        grid-template-columns: auto auto auto; } }
+    .menu-container .menu .combos .item-container {
+      padding: 1em; }
+      .menu-container .menu .combos .item-container .item-name {
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: .5em; }
+      .menu-container .menu .combos .item-container .item-desc {
+        font-weight: 300; }
+      .menu-container .menu .combos .item-container .item-price {
+        color: #FF851B;
+        text-align: right; }
+  .menu-container .menu .final-desc {
+    text-align: center;
+    margin-bottom: 3em;
+    font-weight: bold; }
+  .menu-container .menu .final-desc::after {
+    content: '';
+    margin-top: 2.5em;
+    border-top: 1px solid gray;
+    position: absolute;
+    width: 30vw;
+    transform: translateX(-50%);
+    left: 50%; }
+    @media (min-width: 1024px) {
+      .menu-container .menu .final-desc::after {
+        width: 8vw; } }
+
+.contact {
+  font-family: Garamond;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)) fixed, url("images/Rack3.jpg") center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  line-height: 2;
+  font-size: 1.2em; }
+  .contact h1 {
+    font-weight: bold;
+    color: #FF851B; }
+    @media (min-width: 1440px) {
+      .contact h1 {
+        font-size: 3.5em; } }
+  .contact .contact-container .statement {
+    color: #FF851B; }
+  .contact .contact-container .statement2,
+  .contact .contact-container .number,
+  .contact .contact-container .hours {
+    margin-bottom: 1.5em; }
+  .contact .contact-container #locationheader,
+  .contact .contact-container #hoursheader {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    color: #FF851B; }
+  .contact .contact-container .days {
+    font-weight: bolder; }
+  @media (min-width: 840px) {
+    .contact .contact-container {
+      display: grid;
+      grid-template-columns: auto auto; } }
+  .contact .contact-form {
+    padding: 2em 2.5em; }
+
+/*# sourceMappingURL=style.css.map */
