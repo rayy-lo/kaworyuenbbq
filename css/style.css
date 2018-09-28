@@ -26,8 +26,8 @@
   align-items: center; }
   .page-one h1 {
     text-transform: uppercase;
-    font-weight: bold;
-    text-align: center; }
+    text-align: center;
+    font-weight: bold; }
     @media (min-width: 1024px) {
       .page-one h1 {
         font-size: 3em; } }
@@ -58,8 +58,7 @@
   position: relative; }
   .about h1 {
     position: relative;
-    margin-bottom: 1em;
-    font-weight: bold; }
+    margin-bottom: 1em; }
     @media (min-width: 1440px) {
       .about h1 {
         font-size: 3em; } }
@@ -106,8 +105,7 @@
   margin-bottom: 2em; }
   .photo-grid h1 {
     text-align: center;
-    margin-bottom: .75em;
-    font-weight: bold; }
+    margin-bottom: .75em; }
     @media (min-width: 1440px) {
       .photo-grid h1 {
         font-size: 3em; } }
@@ -138,8 +136,7 @@
   margin: 0 2em; }
   .menu-container h1 {
     margin-bottom: .5em;
-    text-align: center;
-    font-weight: bold; }
+    text-align: center; }
     @media (min-width: 1440px) {
       .menu-container h1 {
         font-size: 3em; } }
@@ -197,12 +194,9 @@
   text-align: center;
   line-height: 2;
   font-size: 1.2em; }
-  .contact h1 {
-    font-weight: bold;
-    color: #FF851B; }
-    @media (min-width: 1440px) {
-      .contact h1 {
-        font-size: 3.5em; } }
+  @media (min-width: 1440px) {
+    .contact h1 {
+      font-size: 3.5em; } }
   .contact .contact-container .statement {
     color: #FF851B; }
   .contact .contact-container .statement2,
