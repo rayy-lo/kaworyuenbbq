@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 $font: Garamond;
 $main-color: #FF851B;
 $lighten-black: lighten(black, 50%);
@@ -32,6 +36,14 @@ $box-shadow: 5px 10px 18px #888888;
     }
 }
 
+.fade-on-scroll {
+    animation: fadeIn 3s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
 .side-nav {
     position: fixed;
     z-index: 1;
@@ -41,14 +53,10 @@ $box-shadow: 5px 10px 18px #888888;
 
     a {
         color: $main-color;
-    }
 
-    a:hover {
-        color: white;
-    }
-
-    a:visited {
-        color: $main-color;
+        i:hover {
+            color: white;
+        }
     }
 }
 
@@ -98,7 +106,13 @@ $box-shadow: 5px 10px 18px #888888;
         text-decoration: none;
         font-size: 1.1em;
         animation: bounceInRight 2s;
+        font-weight: bold;
 
+    }
+
+    a:hover {
+        color: white;
+        border: 2px solid white;
     }
 }
 
@@ -167,11 +181,11 @@ $box-shadow: 5px 10px 18px #888888;
     display: flex;
     flex-direction: column;
     font-family: $font;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 
     h1 {
         text-align: center;
-        margin-bottom: .75em;
+        margin-bottom: .5em;
 
         @include desktop {
             font-size: 3em;
@@ -191,20 +205,6 @@ $box-shadow: 5px 10px 18px #888888;
             @include laptop {
                 max-width: 50vw;
             }
-        }
-    }
-
-    .photo:last-child::after {
-        content: '';
-        margin-top: 2.5em;
-        border-top: 1px solid $lighten-black;
-        position: absolute;
-        width: 30vw;
-        transform: translateX(-50%);
-        left: 50%;
-
-        @include laptop {
-            width: 8vw;
         }
     }
 }
@@ -265,6 +265,12 @@ $box-shadow: 5px 10px 18px #888888;
                     color: $main-color;
                     text-align: right;
                 }
+            }
+
+            .item-container:hover {
+                border: .5px solid $main-color;
+                box-shadow: $box-shadow;
+                border-radius: 1em;
             }
         }
 

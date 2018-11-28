@@ -106,9 +106,32 @@
   -webkit-animation-name: bounceInRight;
   animation-name: bounceInRight; }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+
 * {
   margin: 0;
   padding: 0; }
+
+html {
+  scroll-behavior: smooth; }
+
+.fade-on-scroll {
+  animation: fadeIn 3s; }
+
+.hidden {
+  opacity: 0; }
 
 .side-nav {
   position: fixed;
@@ -118,10 +141,8 @@
   animation: bounceInRight 2s; }
   .side-nav a {
     color: #FF851B; }
-  .side-nav a:hover {
-    color: white; }
-  .side-nav a:visited {
-    color: #FF851B; }
+    .side-nav a i:hover {
+      color: white; }
 
 .page-one {
   font-family: Garamond;
@@ -161,7 +182,11 @@
     color: #FF851B;
     text-decoration: none;
     font-size: 1.1em;
-    animation: bounceInRight 2s; }
+    animation: bounceInRight 2s;
+    font-weight: bold; }
+  .page-one a:hover {
+    color: white;
+    border: 2px solid white; }
 
 .about {
   font-family: Garamond;
@@ -214,10 +239,10 @@
   display: flex;
   flex-direction: column;
   font-family: Garamond;
-  margin-bottom: 2em; }
+  margin-bottom: 1em; }
   .photo-grid h1 {
     text-align: center;
-    margin-bottom: .75em; }
+    margin-bottom: .5em; }
     @media (min-width: 1440px) {
       .photo-grid h1 {
         font-size: 3em; } }
@@ -232,17 +257,6 @@
       @media (min-width: 1024px) {
         .photo-grid .photo img {
           max-width: 50vw; } }
-  .photo-grid .photo:last-child::after {
-    content: '';
-    margin-top: 2.5em;
-    border-top: 1px solid gray;
-    position: absolute;
-    width: 30vw;
-    transform: translateX(-50%);
-    left: 50%; }
-    @media (min-width: 1024px) {
-      .photo-grid .photo:last-child::after {
-        width: 8vw; } }
 
 .menu-container {
   font-family: Garamond;
@@ -282,6 +296,10 @@
       .menu-container .menu .combos .item-container .item-price {
         color: #FF851B;
         text-align: right; }
+    .menu-container .menu .combos .item-container:hover {
+      border: 0.5px solid #FF851B;
+      box-shadow: 5px 10px 18px #888888;
+      border-radius: 1em; }
   .menu-container .menu .final-desc {
     text-align: center;
     margin-bottom: 2em;
