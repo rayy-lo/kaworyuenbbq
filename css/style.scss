@@ -1,339 +1,423 @@
-@import 'animations';
+@import "animations";
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 $font: Garamond;
-$main-color: #FF851B;
+$main-color: #ff851b;
 $lighten-black: lighten(black, 50%);
 $break-contact: 840px;
 $laptop: 1024px;
 $desktop: 1440px;
 $box-shadow: 5px 10px 18px #888888;
 
-
 @mixin contact {
-    @media (min-width: #{$break-contact}) {
-        @content;
-    }
+  @media (min-width: #{$break-contact}) {
+    @content;
+  }
 }
 
 @mixin laptop {
-    @media (min-width: #{$laptop}) {
-        @content;
-    }
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media (min-width: #{$desktop}) {
-        @content;
-    }
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
 }
 
 .fade-on-scroll {
-    animation: fadeIn 3s;
+  animation: fadeIn 3s;
 }
 
 .hidden {
-    opacity: 0;
+  opacity: 0;
 }
 
 .side-nav {
-    position: fixed;
-    z-index: 1;
-    background: transparent;
-    padding: 1em;
-    animation: bounceInRight 2s;
+  position: fixed;
+  z-index: 1;
+  background: transparent;
+  padding: 1em;
+  animation: bounceInRight 2s;
 
-    a {
-        color: $main-color;
+  a {
+    color: $main-color;
 
-        i:hover {
-            color: white;
-        }
+    i:hover {
+      color: white;
     }
+  }
 }
 
 .page-one {
-    font-family: $font;
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)) fixed, url('./images/peking-duck2.jpg') no-repeat center center fixed;
-    background-size: cover;
+  font-family: $font;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)) fixed,
+    url("./images/peking-duck2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    animation: bounceInUp 2s;
+
+    @include laptop {
+      font-size: 3em;
+    }
+  }
+
+  h1::after {
+    content: "Affordable and delicious";
+    font-style: italic;
+    font-size: 0.5em;
+    display: block;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    padding: 1em 5em;
+    text-transform: capitalize;
+    margin-bottom: 3em;
+
+    @include laptop {
+      margin-bottom: 1em;
+    }
+  }
+
+  a {
+    border: 2px solid $main-color;
+    padding: 1em;
+    color: $main-color;
+    text-decoration: none;
+    font-size: 1.1em;
+    animation: bounceInRight 2s;
+    font-weight: bold;
+  }
+
+  a:hover {
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-
-    h1 {
-        text-transform: uppercase;
-        text-align: center;
-        font-weight: bold;
-        animation: bounceInUp 2s;
-
-        @include laptop {
-            font-size: 3em;
-        }
-    }
-
-    h1::after {
-        content: 'Affordable and delicious';
-        font-style: italic;
-        font-size: .5em;
-        display: block;
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: normal;
-        padding: 1em 5em;
-        text-transform: capitalize;
-        margin-bottom: 3em;
-
-        @include laptop {
-            margin-bottom: 1em;
-        }
-    }
-
-    a {
-        border: 2px solid $main-color;
-        padding: 1em;
-        color: $main-color;
-        text-decoration: none;
-        font-size: 1.1em;
-        animation: bounceInRight 2s;
-        font-weight: bold;
-
-    }
-
-    a:hover {
-        color: white;
-        border: 2px solid white;
-    }
+    border: 2px solid white;
+  }
 }
 
 .about {
-    font-family: $font;
-    text-align: center;
-    padding: 3em 2em;
+  font-family: $font;
+  text-align: center;
+  padding: 3em 2em;
+  position: relative;
+
+  h1 {
     position: relative;
-
-    h1 {
-        position: relative;
-        margin-bottom: 1em;
-
-        @include desktop {
-            font-size: 3em;
-        }
-    }
-
-    p {
-        padding: 0 2em;
-
-        @include laptop {
-            font-size: 1.2em;
-            padding: 0 4em;
-        }
-
-        @include desktop {
-            padding: 0 6em;
-            font-size: 1.5em;
-        }
-    }
-
-    h1::after {
-        content: '';
-        position: absolute;
-        border-top: 1px solid $lighten-black;
-        width: 30vw;
-        left: 50%;
-        transform: translateX(-50%);
-        padding-left: -1.5em;
-        display: block;
-        margin-top: 0.5em;
-
-        @include laptop {
-            width: 8vw;
-        }
-    }
-}
-
-
-.about::after {
-    content: '';
-    margin-top: 1em;
-    border-top: 1px solid $lighten-black;
-    position: absolute;
-    width: 30vw;
-    transform: translateX(-50%);
-    left: 50%;
-
-    @include laptop {
-        width: 8vw;
-    }
-}
-
-.photo-grid {
-    display: flex;
-    flex-direction: column;
-    font-family: $font;
     margin-bottom: 1em;
 
-    h1 {
-        text-align: center;
-        margin-bottom: .5em;
-
-        @include desktop {
-            font-size: 3em;
-        }
+    @include desktop {
+      font-size: 3em;
     }
+  }
 
-    .photo {
-        margin: 0 auto 2em;
+  p {
+    padding: 0 2em;
 
-        img {
-            max-width: 80vw;
-            height: auto;
-            border: 1px solid $lighten-black;
-            padding: .25em;
-            box-shadow: $box-shadow;
-
-            @include laptop {
-                max-width: 50vw;
-            }
-        }
-    }
-}
-
-.menu-container {
-    font-family: $font;
-    margin: 0 2em;
-    ;
-
-    h1 {
-        margin-bottom: .5em;
-        text-align: center;
-
-        @include desktop {
-            font-size: 3em;
-        }
+    @include laptop {
+      font-size: 1.2em;
+      padding: 0 4em;
     }
 
     @include desktop {
-        font-size: 1.4em;
-        margin: 0 5em;
+      padding: 0 6em;
+      font-size: 1.5em;
+    }
+  }
+
+  h1::after {
+    content: "";
+    position: absolute;
+    border-top: 1px solid $lighten-black;
+    width: 30vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: -1.5em;
+    display: block;
+    margin-top: 0.5em;
+
+    @include laptop {
+      width: 8vw;
+    }
+  }
+}
+
+.about::after {
+  content: "";
+  margin-top: 1em;
+  border-top: 1px solid $lighten-black;
+  position: absolute;
+  width: 30vw;
+  transform: translateX(-50%);
+  left: 50%;
+
+  @include laptop {
+    width: 8vw;
+  }
+}
+
+.photo-header {
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-family: $font;
+
+  @include desktop {
+    font-size: 3em;
+  }
+}
+
+.photo-grid {
+  display: flex;
+  flex-direction: column;
+  font-family: $font;
+  margin-bottom: 1em;
+
+  @include laptop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .photo {
+    margin: 0 auto 2em;
+
+    img {
+      max-width: 80vw;
+      height: auto;
+      border: 1px solid $lighten-black;
+      padding: 0.25em;
+      box-shadow: $box-shadow;
+
+      @include laptop {
+        width: 44vw;
+      }
+    }
+  }
+}
+
+.menu-container {
+  font-family: $font;
+  margin: 0 2em;
+
+  h1 {
+    margin-bottom: 0.5em;
+    text-align: center;
+
+    @include desktop {
+      font-size: 3em;
+    }
+  }
+
+  @include desktop {
+    font-size: 1.4em;
+    margin: 0 5em;
+  }
+
+  .menu {
+    .item-header {
+      font-weight: bold;
+      margin-bottom: 1em;
+      text-transform: uppercase;
+      color: $main-color;
+      text-align: center;
+      border: 1px solid $main-color;
     }
 
-    .menu {
+    .combos {
+      display: grid;
+      grid-template-columns: auto auto;
+      margin-bottom: 0.5em;
 
-        .item-header {
-            font-weight: bold;
-            margin-bottom: 1em;
-            text-transform: uppercase;
-            color: $main-color;
-            text-align: center;
-            border: 1px solid $main-color;
+      @include laptop {
+        grid-template-columns: auto auto auto;
+      }
+
+      .item-container {
+        padding: 1em;
+
+        .item-name {
+          font-weight: bold;
+          text-transform: uppercase;
+          margin-bottom: 0.5em;
         }
 
-        .combos {
-            display: grid;
-            grid-template-columns: auto auto;
-            margin-bottom: .5em;
-
-            @include laptop {
-                grid-template-columns: auto auto auto;
-            }
-
-            .item-container {
-                padding: 1em;
-
-                .item-name {
-                    font-weight: bold;
-                    text-transform: uppercase;
-                    margin-bottom: .5em;
-                }
-
-                .item-desc {
-                    font-weight: 300;
-                }
-
-                .item-price {
-                    color: $main-color;
-                    text-align: right;
-                }
-            }
-
-            .item-container:hover {
-                border: .5px solid $main-color;
-                box-shadow: $box-shadow;
-                border-radius: 1em;
-            }
+        .item-desc {
+          font-weight: 300;
         }
 
-        .final-desc {
-            text-align: center;
-            margin-bottom: 2em;
-            font-weight: bold;
-            color: $main-color;
+        .item-price {
+          color: $main-color;
+          text-align: right;
         }
+      }
     }
+
+    .final-desc {
+      text-align: center;
+      margin-bottom: 2em;
+      font-weight: bold;
+      color: $main-color;
+    }
+  }
 }
 
 .contact {
-    font-family: $font;
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)) fixed, url('images/Rack3.jpg') center center fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    text-align: center;
-    line-height: 2;
-    font-size: 1.2em;
-    padding-bottom: 2em;
+  font-family: $font;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)) fixed,
+    url("images/Rack3.jpg") center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  line-height: 2;
+  font-size: 1.2em;
+  padding-bottom: 2em;
+  box-shadow: $box-shadow;
 
-    h1 {
+  .contact-container {
+    .statement {
+      color: $main-color;
+      font-weight: bold;
+    }
 
+    .statement2,
+    .number,
+    .hours {
+      margin-bottom: 1.5em;
+    }
+
+    #locationheader,
+    #hoursheader {
+      text-transform: uppercase;
+      margin-bottom: 1em;
+      color: $main-color;
+    }
+
+    .days {
+      font-weight: bolder;
+    }
+
+    @include contact {
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+    }
+  }
+
+  .contact-form {
+    box-shadow: 4px 4px 8px #4a4a4a;
+    padding: 2em;
+    width: 70%;
+    margin: 0 auto;
+    border: 2px solid #4a4a4a;
+    background: #2c2c2c;
+
+    h4 {
+      color: $main-color;
+      font-weight: bold;
+
+      @include desktop {
+        font-size: 2.5em;
+      }
+    }
+
+    .line {
+      width: 100%;
+      border-top: 2px solid #4a4a4a;
+      margin-top: 1em;
+      margin-bottom: 2.5em;
+    }
+
+    textarea {
+      background: #4a4a4a;
+      color: #f0f0f0;
+      border: 4px solid $main-color;
+      outline: 0;
+      font-size: 20px;
+    }
+
+    label {
+      display: block;
+
+      .label-text {
+        transform: translateY(-47px);
         color: $main-color;
+        letter-spacing: 1.5px;
+        text-transform: capitalize;
+        font-size: 1.2em;
+        transition: 0.3s all;
+      }
 
-        @include desktop {
-            font-size: 3.5em;
-        }
+      input {
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #4a4a4a;
+        color: #f0f0f0;
+        outline: 0;
+        transition: width 0.35s ease-in-out;
+        width: 65%;
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 1.5em;
+      }
+
+      input:focus {
+        width: 85%;
+        border-bottom: 1px solid $main-color;
+      }
+
+      input:focus + .label-text {
+        transform: translateY(-80px);
+        font-size: 0.8em;
+        color: $main-color;
+      }
+
+      input:valid + .label-text {
+        transform: translateY(-80px);
+        text-align: left;
+      }
+
+      input:valid {
+        color: #f0f0f0;
+        border-bottom: 1px solid $main-color;
+      }
     }
 
-    .contact-container {
-
-        .statement {
-            color: $main-color;
-            font-weight: bold;
-        }
-
-        .statement2,
-        .number,
-        .hours {
-            margin-bottom: 1.5em;
-        }
-
-        #locationheader,
-        #hoursheader {
-            text-transform: uppercase;
-            margin-bottom: 1em;
-            color: $main-color;
-        }
-
-        .days {
-            font-weight: bolder;
-        }
-
-        @include contact {
-            display: grid;
-            grid-template-columns: auto auto;
-        }
+    .sendbtn {
+      border-radius: 27px;
+      width: 30%;
+      border: 3px solid #4a4a4a;
+      font-weight: bold;
+      height: 3em;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: $main-color;
+      color: #f0f0f0;
     }
 
-    .contact-form {
-        padding: 2em 2.5em;
+    .sendbtn:hover {
+      background: #4a4a4a;
+      border: 3px solid #f0f0f0;
     }
+  }
 }
