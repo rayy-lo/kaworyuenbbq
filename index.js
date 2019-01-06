@@ -11,25 +11,25 @@ function sendDataToLambda(e) {
         subject: formSubject,
         message: formMessage
     }
-    var lambdaRequest = new Request(endpoint, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-          },
-        body: JSON.stringify(body)
-    });
 
-    fetch(lambdaRequest)
-        .then(response => console.log(response))
-        .catch(err => console.log(err));
-
-    if (lambdaRequest) {
-        document.getElementById('sentmsg').textContent = 'Email has been sent. Thank you!'
-        document.getElementById('serverless-contact-form').reset();
-        return false
-    } else {
-        document.getElementById('sentmsg').textContent = 'Error'
-    }
+    fetch(endpoint, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+      .then(response => {
+        if(response.ok){
+          document.getElementById('sentmsg').textContent = 'Email has been sent. Thank you!'
+          document.getElementById('serverless-contact-form').reset();
+        } else {
+          document.getElementById('sentmsg').textContent = 'Error'
+          throw Error (`Request rejected with status ${res.status}`)
+        }
+      })
+      .catch(err => console.error(err));
 }
 
 var animateHTML = function() {
