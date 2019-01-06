@@ -200,17 +200,24 @@ $box-shadow: 5px 10px 18px #888888;
 
   .photo {
     margin: 0 auto 2em;
+    border: 1px solid $lighten-black;
+    box-shadow: $box-shadow;
+    background-color: #fbbc88;
 
     img {
       max-width: 80vw;
       height: auto;
-      border: 1px solid $lighten-black;
-      padding: 0.25em;
-      box-shadow: $box-shadow;
+      padding: 5px;
+      border-radius: 1em;
 
       @include laptop {
         width: 44vw;
       }
+    }
+
+    .desc {
+      text-align: center;
+      padding: 15px;
     }
   }
 }
