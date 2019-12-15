@@ -120,27 +120,6 @@
   animation-name: bounceInRight;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -150,17 +129,17 @@ html {
   scroll-behavior: smooth;
 }
 
-.fade-on-scroll {
-  animation: fadeIn 3s;
+.gallery {
+  padding: 2em 0;
 }
-
-.hidden {
-  opacity: 0;
+.gallery h1 {
+  font-family: Garamond;
+  text-align: center;
 }
 
 #carousel {
-  margin: 0 auto 3em;
-  width: 95%;
+  margin: 1.5em auto;
+  width: 90%;
 }
 #carousel .carousel-indicators li {
   background-color: black;
@@ -168,7 +147,7 @@ html {
 
 .carousel-item img {
   filter: brightness(82%);
-  border: 1px solid gray;
+  border: 1px solid #3a3535;
   height: 300px;
 }
 
@@ -182,20 +161,6 @@ html {
 .carousel-control-prev {
   opacity: 1;
   color: black;
-}
-
-.side-nav {
-  position: fixed;
-  z-index: 1;
-  background: transparent;
-  padding: 1em;
-  animation: bounceInRight 2s;
-}
-.side-nav a {
-  color: #ff851b;
-}
-.side-nav a i:hover {
-  color: white;
 }
 
 .page-one {
@@ -244,7 +209,7 @@ html {
 .about {
   font-family: Garamond;
   text-align: center;
-  padding: 3em 2em 1.5em;
+  padding: 3em 2em;
   position: relative;
 }
 .about h1 {
@@ -255,10 +220,11 @@ html {
   font-size: 1.2em;
   padding: 0 1em;
 }
-.about h1::after {
+
+.section-header::after {
   content: "";
   position: absolute;
-  border-top: 1px solid gray;
+  border-top: 1px solid #3a3535;
   width: 15vw;
   left: 50%;
   transform: translateX(-50%);
@@ -269,47 +235,70 @@ html {
 
 .menu-container {
   font-family: Garamond;
-  margin: 0 2em;
+  padding: 3em 1em;
+  background: #eeeeee;
 }
 .menu-container h1 {
-  margin-bottom: 0.5em;
   text-align: center;
+  color: #ff7315;
 }
-.menu-container h1 .menu .item-header {
-  font-weight: bold;
-  margin-bottom: 1em;
-  text-transform: uppercase;
-  color: #ff851b;
+.menu-container .card {
+  margin: 1em;
+}
+
+.menu {
+  padding: 1em 0;
+}
+
+.card {
   text-align: center;
-  border: 1px solid #ff851b;
+  min-height: 250px;
 }
-.menu-container h1 .menu .combos {
-  display: grid;
-  grid-template-columns: auto auto;
-  margin-bottom: 0.5em;
+
+.card-text {
+  margin-top: 1em;
 }
-.menu-container h1 .menu .combos .item-container {
-  padding: 1em;
-}
-.menu-container h1 .menu .combos .item-container .item-name {
-  font-weight: bold;
+
+.card-title {
   text-transform: uppercase;
-  margin-bottom: 0.5em;
+  font-weight: bolder;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.menu-container h1 .menu .combos .item-container .item-desc {
-  font-weight: 300;
+
+.collapse-btn {
+  background-color: #3a3535;
+  color: white;
 }
-.menu-container h1 .menu .combos .item-container .item-price {
+
+.circle-border {
+  border-radius: 50%;
+}
+
+.item-container {
+  padding: 0 2em;
+}
+.item-container .item-name {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.item-container .item-desc {
+  padding: 0.5em 0;
+  font-size: 1.2em;
+  text-align: left;
+}
+.item-container .item-price {
   color: #ff851b;
+  font-size: 1.2em;
   text-align: right;
 }
-.menu-container h1 .menu .final-desc {
-  text-align: center;
-  margin-bottom: 2em;
-  font-weight: bold;
-  color: #ff851b;
+
+.item-divider {
+  margin: 1em 0;
+  color: gray;
+  opacity: 0.2;
 }
-.menu-container .contact {
+
+.contact {
   font-family: Garamond;
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)) fixed, url("../images/Rack3-o.jpg") center center fixed;
   background-size: cover;
@@ -320,110 +309,33 @@ html {
   font-size: 1.2em;
   padding-bottom: 2em;
   box-shadow: 5px 10px 18px #888888;
+  height: 100vh;
 }
-.menu-container .contact .contact-container .statement {
+.contact .contact-container .statement {
   color: #ff851b;
   font-weight: bold;
 }
-.menu-container .contact .contact-container .statement2,
-.menu-container .contact .contact-container .number,
-.menu-container .contact .contact-container .hours {
+.contact .contact-container .statement2,
+.contact .contact-container .number,
+.contact .contact-container .hours {
   margin-bottom: 1.5em;
 }
-.menu-container .contact .contact-container #locationheader,
-.menu-container .contact .contact-container #hoursheader {
+.contact .contact-container #locationheader,
+.contact .contact-container #hoursheader {
   text-transform: uppercase;
   margin-bottom: 1em;
   color: #ff851b;
 }
-.menu-container .contact .contact-container .days {
+.contact .contact-container .days {
   font-weight: bolder;
 }
-.menu-container .contact .contact-form {
-  box-shadow: 4px 4px 8px #4a4a4a;
-  padding: 2em;
-  width: 70%;
-  margin: 0 auto;
-  border: 2px solid #4a4a4a;
-  background: #2c2c2c;
-}
-.menu-container .contact .contact-form h4 {
+.contact .contact-container .email {
   color: #ff851b;
-  font-weight: bold;
-}
-.menu-container .contact .contact-form .line {
-  width: 100%;
-  border-top: 2px solid #ff851b;
-  margin-top: 1em;
-  margin-bottom: 2.5em;
-}
-.menu-container .contact .contact-form textarea {
-  background: #4a4a4a;
-  color: #f0f0f0;
-  border: 4px solid #ff851b;
-  outline: 0;
-  font-size: 20px;
-  line-height: 1em;
-}
-.menu-container .contact .contact-form label {
-  display: block;
-}
-.menu-container .contact .contact-form label .label-text {
-  transform: translateY(-47px);
-  color: #ff851b;
-  letter-spacing: 1.5px;
-  text-transform: capitalize;
-  font-size: 1.2em;
-  transition: 0.3s all;
-}
-.menu-container .contact .contact-form label input {
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #f0f0f0;
-  color: #f0f0f0;
-  outline: 0;
-  transition: width 0.35s ease-in-out;
-  width: 65%;
-  text-align: center;
-  font-size: 1.5em;
-  line-height: 1.5em;
-}
-.menu-container .contact .contact-form label input:focus {
-  width: 85%;
-  border-bottom: 1px solid #ff851b;
-}
-.menu-container .contact .contact-form label input:focus + .label-text {
-  transform: translateY(-80px);
-  font-size: 0.8em;
-  color: #ff851b;
-}
-.menu-container .contact .contact-form label input:valid + .label-text {
-  transform: translateY(-80px);
-  text-align: left;
-}
-.menu-container .contact .contact-form label input:valid {
-  color: #f0f0f0;
-  border-bottom: 1px solid #ff851b;
-}
-.menu-container .contact .contact-form .sendbtn {
-  border-radius: 27px;
-  width: 30%;
-  border: 3px solid #4a4a4a;
-  font-weight: bold;
-  height: 3em;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  background: #ff851b;
-  color: #f0f0f0;
-}
-.menu-container .contact .contact-form .sendbtn:hover {
-  background: #4a4a4a;
-  border: 3px solid #f0f0f0;
-}
-.menu-container .contact #sentmsg {
-  color: #ff851b;
-  font-weight: bold;
-  font-size: 1em;
+  font-weight: bolder;
+  font-family: Garamond;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
