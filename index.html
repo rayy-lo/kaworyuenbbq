@@ -43,15 +43,17 @@
         manner. No food leaves the kitchen that we ourselves would not eat.
       </p>
     </section>
-    <section class="menu-container">
+    <section class="menu-container">          
       <div class="card meat-card">
         <div class="card-body">
+          <clipPath></clipPath>
+          <h3 class="card-title">Meats</h3>
           <picture>
-            <source media="(max-width: 900px)" srcset="./images/meatIcon_200x200.jpg">
-            <img class="menu-icon" src="./images/meatIcon.jpg" alt="Meat Icon for Menu">
+            <source media="(max-width: 900px)" srcset="./images/meat.jpg">
+            <img class="menu-icon circle-border" src="./images/meat.jpg" alt="Meat Icon for Menu">
           </picture>
-          <p class="card-text">Fresh Barbecued Meat Everyday</p>
-          <button aria-expanded="false" aria-controls="meats-menu" class="collapse-btn btn btn-block" type="button" data-toggle="collapse" data-target="#meats-menu">
+          <p class="card-text">Our barbecued meats are made fresh every day!</p>
+          <button aria-expanded="false" aria-controls="meats-menu" class="collapse-btn btn btn-lg btn-block" type="button" data-toggle="collapse" data-target="#meats-menu">
             Show
           </button>
         </div>
@@ -137,13 +139,15 @@
       </div>
       <div class="card combo-card">
         <div class="card-body">
-          <h5 class="card-title">Meals</h5>
+          <clipPath>
+          </clipPath>
+          <h3 class="card-title">Meals</h3>
           <picture>
             <source media="(max-width: 900px)" srcset="./images/riceBowl2.jpg">
             <img class="menu-icon circle-border" src="./images/riceBowl2.jpg" alt="Rice bowl Icon for Menu">
           </picture>
-          <p class="card-text">Your choice of meat(s) with rice and vegetables</p>
-          <button aria-expanded="false" class="collapse-btn btn btn-block" type="button" data-toggle="collapse" data-target="#combo-menu">
+          <p class="card-text">Your choice of meat(s) with rice and vegetables.</p>
+          <button aria-expanded="false" class="collapse-btn btn btn-lg btn-block" type="button" data-toggle="collapse" data-target="#combo-menu">
             Show
           </button>
         </div>
@@ -187,9 +191,14 @@
       </div>
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Sides</h5>
-          <p class="card-text">Delicious sides to go with your food</p>
-          <button aria-expanded="false" class="btn btn-block collapse-btn" type="button" data-toggle="collapse" data-target="#sides-menu">
+          <clipPath></clipPath>
+          <h3 class="card-title">Sides</h3>
+          <picture>
+            <source media="(max-width: 900px)" srcset="./images/tofu.jpg">
+            <img class="menu-icon circle-border" src="./images/tofu.jpg" alt="Tofu Icon for Menu Sides">
+          </picture>
+          <p class="card-text">Delicious sides to go with your food.</p>
+          <button aria-expanded="false" class="btn btn-block btn-lg collapse-btn" type="button" data-toggle="collapse" data-target="#sides-menu">
             Show
           </button>
         </div>
@@ -223,13 +232,15 @@
       </div>
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Catering</h5>
+          <clipPath>
+          </clipPath>
+          <h3 class="card-title">Catering</h3>
           <picture>
             <source media="(max-width: 900px)" srcset="./images/roastedPig-edited.jpg">
-            <img class="menu-icon circle-border" src="./images/roastedPig-edited.jpg" alt="Rice bowl Icon for Menu">
+            <img class="menu-icon circle-border" src="./images/roastedPig-edited.jpg" alt="Roasted Pig Icon for Menu">
           </picture>
           <p class="card-text">Have a big event planned? Order one of our specialties. These can be cut for you, just ask!</p>
-          <button aria-expanded="false" class="collapse-btn btn btn-block" type="button" data-toggle="collapse" data-target="#cater-menu">
+          <button aria-expanded="false" class="collapse-btn btn-lg btn btn-block" type="button" data-toggle="collapse" data-target="#cater-menu">
           Show
           </button>
         </div>
@@ -261,7 +272,6 @@
       </div>
     </section>
     <section class="gallery">
-      <h1>Gallery</h1>
       <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -271,25 +281,37 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" alt="BBQ Pork with Roasted Duck" src="./images/carousel1.jpg">
+            <picture>
+              <source media="(max-width: 450px)" srcset="./images/carousel1_350x350.jpg">
+              <img class="d-block w-100" alt="BBQ Pork with Roasted Duck" src="./images/carousel1.jpg"> 
+            </picture>
             <div class="carousel-caption d-none d-md-block">
-              <h5>BBQ Pork with Roasted Duck</h5>
+              <h3>BBQ Pork with Roasted Duck</h3>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./images/carousel2.jpg" class="d-block w-100" alt="Roasted Pork and Duck">
+            <picture>
+              <source media="(max-width: 450px)" srcset="./images/carousel2_350x350.jpg">
+              <img src="./images/carousel2.jpg" class="d-block w-100" alt="Roasted Pork and Duck">  
+            </picture>
             <div class="carousel-caption d-none d-md-block">
               <h5>Roasted Pork and Duck</h5>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./images/carousel3.jpg" class="d-block w-100" alt="BBQ Chicken">
+            <picture>
+              <source media="(max-width: 450px)" srcset="./images/carousel3_350x350.jpg">
+              <img src="./images/carousel3.jpg" class="d-block w-100" alt="BBQ Chicken">
+            </picture>
             <div class="carousel-caption d-none d-md-block">
               <h5>BBQ Chicken</h5>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./images/carousel5.jpg" class="d-block w-100" alt="Whole Roasted Duck">
+            <picture>
+              <source media="(max-width: 450px)" srcset="./images/carousel5_350x350.jpg">
+              <img src="./images/carousel5.jpg" class="d-block w-100" alt="Whole Roasted Duck">
+            </picture>
             <div class="carousel-caption d-none d-md-block">
               <h5>Whole Roasted Duck</h5>
             </div>
@@ -305,12 +327,15 @@
         </a>
         </div>
       </div>
+      <div class="gallery-textContainer">
+        <i class="fas fa-drumstick-bite"></i>
+        <p>Hungry yet? Check below for our address and come in! You can also find us on UberEats.</p>
+      </div>
     </section>
     <section class="contact">
-      <br />
       <a name="contactjump"></a>
-      <p id="sentmsg"></p>
       <div class="contact-container">
+        <h1>Contact</h1>
         <div class="contact-info">
           <h4 class="statement">Got a question?</h4>
           <div class="statement2">
@@ -326,12 +351,12 @@
           <div class="hours">10am — 8:30pm</div>
           <div class="days">Holidays</div>
           <div class="hours">10am — 8:30pm</div>
-        </div>
-        <div class="email">
-          <i class="fas fa-envelope"> EMAIL</i>
-          <a href="mailto:kaworyuenbbq@hotmail.com">
-            kaworyuenbbq@hotmail.com
-          </a>
+          <div class="email">
+            <i class="fas fa-envelope"> EMAIL</i>
+            <a href="mailto:kaworyuenbbq@hotmail.com">
+              kaworyuenbbq@hotmail.com
+            </a>
+          </div>
         </div>
       </div>
     </section>
