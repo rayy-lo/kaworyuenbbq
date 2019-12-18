@@ -19,7 +19,8 @@ $box-shadow: 5px 10px 18px #888888;
 $tablet-breakpoint: 651px;
 $tablet-lg-breakpoint: 767px;
 $laptop-breakpoint: 1024px;
-
+$laptop-md-breakpoint: 1385px;
+$desktop-breakpoint: 1650px; 
 
 @mixin for-tablet {
   @media (min-width: $tablet-breakpoint) {
@@ -35,6 +36,18 @@ $laptop-breakpoint: 1024px;
 
 @mixin for-laptop {
   @media (min-width: $laptop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin for-laptop-md {
+  @media (min-width: $laptop-md-breakpoint){
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: $desktop-breakpoint){
     @content;
   }
 }
@@ -64,6 +77,19 @@ $laptop-breakpoint: 1024px;
     width: 90%;
     margin: 3em auto 0em;
     border: 1px solid $lighten-black;
+  }
+
+  @include for-laptop {
+    width: 70%;
+    box-shadow: $box-shadow;
+  }
+
+  @include for-laptop-md {
+    width: 60%;
+  }
+
+  @include for-desktop {
+    width: 50%;
   }
 }
 
@@ -153,7 +179,11 @@ $laptop-breakpoint: 1024px;
 
     @include for-laptop {
       margin-bottom: 1em;
-      font-size: 4em;
+      font-size: 3em;
+    }
+
+    @include for-laptop-md {
+      margin-bottom: 1.5em;
     }
   }
 
@@ -172,8 +202,13 @@ $laptop-breakpoint: 1024px;
     }
 
     @include for-laptop {
-      font-size: 1.5em;
-      line-height: 2em;
+      font-size: 1.4em;
+      line-height: 1.9em;
+    }
+
+    @include for-laptop-md {
+      width: 60%;
+      margin: 0 auto;
     }
   }
 }
@@ -196,24 +231,24 @@ $laptop-breakpoint: 1024px;
 
 .menu-container {
   font-family: $font;
-  padding: 3em 1em;
-  background: #eeeeee;
-
-  h1 {
-    text-align: center;
-    color: $dark-main-color;
-  }
+  padding: 6em 1em 4em;
+  background: #f9f6f7;
 
   @include for-tablet{
-    padding: 3em 5em;
+    padding: 6em 5em 4em;
   }
 
   @include for-laptop {
     display: flex;
-    padding: 3em 2em;
+    padding: 6em 2em 4em; 
     flex-wrap: wrap;
     justify-content: space-around;
   }
+
+  @include for-laptop-md {
+    justify-content: center;
+  }
+
 }
 
 .menu {
@@ -225,15 +260,28 @@ $laptop-breakpoint: 1024px;
   }
 }
 
+.prevent-stretch {
+  align-self: flex-start;
+}
+
 .card {
   text-align: center;
   min-height: 450px;
-  margin-bottom: 2em;
   position: relative;
   z-index: 2;
+  margin-bottom: 2em;
 
   @include for-laptop {
     width: 45%;
+  }
+
+  @include for-laptop-md {
+    width: 40%;
+    margin: 2em;
+  }
+
+  @include for-desktop {
+    width: 35%;
   }
 }
 
@@ -253,6 +301,10 @@ clipPath {
   padding: 1em;
   font-size: 1.2em;
   margin: 0;
+
+  @include for-laptop {
+    min-height: 100px;
+  }
 }
 
 .card-title {
@@ -299,6 +351,10 @@ clipPath {
     width: 50%;
     margin-bottom: 1em;
   }
+
+  @include for-laptop {
+    padding: 0 1em;
+  }
 }
 
 .item-divider {
@@ -328,7 +384,19 @@ clipPath {
   flex-direction: column;
   justify-content: center;
 
+  @include for-laptop {
+    font-size: 1.4em;
+  }
+
   .contact-container {
+    
+    @include for-laptop {
+      background: #232020;  
+      margin: 0 auto;
+      padding: 3em;
+      border: 2px solid black;
+    }
+
     .statement {
       color: $main-color;
       font-weight: bold;

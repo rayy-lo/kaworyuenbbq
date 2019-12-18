@@ -157,6 +157,22 @@ html {
     border: 1px solid #3a3535;
   }
 }
+@media (min-width: 1024px) {
+  #carousel {
+    width: 70%;
+    box-shadow: 5px 10px 18px #888888;
+  }
+}
+@media (min-width: 1385px) {
+  #carousel {
+    width: 60%;
+  }
+}
+@media (min-width: 1650px) {
+  #carousel {
+    width: 50%;
+  }
+}
 
 .carousel-item img {
   filter: brightness(82%);
@@ -238,7 +254,12 @@ html {
 @media (min-width: 1024px) {
   .about h1 {
     margin-bottom: 1em;
-    font-size: 4em;
+    font-size: 3em;
+  }
+}
+@media (min-width: 1385px) {
+  .about h1 {
+    margin-bottom: 1.5em;
   }
 }
 .about p {
@@ -259,8 +280,14 @@ html {
 }
 @media (min-width: 1024px) {
   .about p {
-    font-size: 1.5em;
-    line-height: 2em;
+    font-size: 1.4em;
+    line-height: 1.9em;
+  }
+}
+@media (min-width: 1385px) {
+  .about p {
+    width: 60%;
+    margin: 0 auto;
   }
 }
 
@@ -283,24 +310,25 @@ html {
 
 .menu-container {
   font-family: Garamond;
-  padding: 3em 1em;
-  background: #eeeeee;
-}
-.menu-container h1 {
-  text-align: center;
-  color: #ff7315;
+  padding: 6em 1em 4em;
+  background: #f9f6f7;
 }
 @media (min-width: 651px) {
   .menu-container {
-    padding: 3em 5em;
+    padding: 6em 5em 4em;
   }
 }
 @media (min-width: 1024px) {
   .menu-container {
     display: flex;
-    padding: 3em 2em;
+    padding: 6em 2em 4em;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+}
+@media (min-width: 1385px) {
+  .menu-container {
+    justify-content: center;
   }
 }
 
@@ -314,16 +342,31 @@ html {
   }
 }
 
+.prevent-stretch {
+  align-self: flex-start;
+}
+
 .card {
   text-align: center;
   min-height: 450px;
-  margin-bottom: 2em;
   position: relative;
   z-index: 2;
+  margin-bottom: 2em;
 }
 @media (min-width: 1024px) {
   .card {
     width: 45%;
+  }
+}
+@media (min-width: 1385px) {
+  .card {
+    width: 40%;
+    margin: 2em;
+  }
+}
+@media (min-width: 1650px) {
+  .card {
+    width: 35%;
   }
 }
 
@@ -343,6 +386,11 @@ clipPath {
   padding: 1em;
   font-size: 1.2em;
   margin: 0;
+}
+@media (min-width: 1024px) {
+  .card-text {
+    min-height: 100px;
+  }
 }
 
 .card-title {
@@ -387,6 +435,11 @@ clipPath {
     margin-bottom: 1em;
   }
 }
+@media (min-width: 1024px) {
+  .item-container {
+    padding: 0 1em;
+  }
+}
 
 .item-divider {
   margin: 1em 0;
@@ -413,6 +466,19 @@ clipPath {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (min-width: 1024px) {
+  .contact {
+    font-size: 1.4em;
+  }
+}
+@media (min-width: 1024px) {
+  .contact .contact-container {
+    background: #232020;
+    margin: 0 auto;
+    padding: 3em;
+    border: 2px solid black;
+  }
 }
 .contact .contact-container .statement {
   color: #ff851b;
