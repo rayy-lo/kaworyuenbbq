@@ -27,11 +27,11 @@
   </head>
 
   <body>
-    <section class="page-one">
+    <section aria-label="landing" class="page-one">
       <h1>Ka Wor Yuen BBQ</h1>
-      <a href="#contactjump">Learn More</a>
+      <a aria-hidden="true" href="#contactjump">Learn More</a>
     </section>
-    <section class="about">
+    <section aria-label="about" class="about">
       <h1 class="section-header">ABOUT</h1>
       <p>
         <b style="color: #ff851b">Ka Wor Yuen BBQ</b> was founded in 1998 and we have been cultivating our
@@ -43,103 +43,102 @@
         manner. No food leaves the kitchen that we ourselves would not eat.
       </p>
     </section>
-    <section class="menu-container">
-
+    <section aria-label="menu" class="menu-container">
         <div class="card prevent-stretch meat-card">
-          <div class="card-body">
+          <section aria-label="meat menu" class="card-body">
             <clipPath></clipPath>
             <h3 class="card-title">Meats</h3>
             <picture>
               <source media="(max-width: 900px)" srcset="./images/meat.jpg">
-              <img class="menu-icon circle-border" src="./images/meat.jpg" alt="Meat Icon for Menu">
+              <img class="menu-icon circle-border" src="./images/meat.jpg" alt="Meat Image">
             </picture>
             <p class="card-text">Our barbecued meats are made fresh every day!</p>
             <button aria-expanded="false" aria-controls="meats-menu" class="collapse-btn btn btn-lg btn-block" type="button" data-toggle="collapse" data-target="#meats-menu">
               Show
             </button>
-          </div>
-          <div class="collapse menu" id="meats-menu">
-            <div class="item-container">
-              <div class="item-name">Roasted Pork</div>
-              <div class="item-desc">
-                Crispy skin and tender meat with flavorful fat that complements
-                our hoisin sauce
+            <section aria-label="items" class="collapse menu" id="meats-menu">
+              <div class="item-container">
+                <div class="item-name">Roasted Pork</div>
+                <div class="item-desc">
+                  Crispy skin and tender meat with flavorful fat that complements
+                  our hoisin sauce
+                </div>
+                <div class="item-price">$7.50/LB or $9.00/LB (Belly)</div>
               </div>
-              <div class="item-price">$7.50/LB or $9.00/LB (Belly)</div>
-            </div>
-            <i class="item-divider fas fa-utensils"></i>
-            <div class="item-container">
-              <div class="item-name">BBQ Pork</div>
-              <div class="item-desc">
-                Barbequed with a unique dry spice rub and followed with a honey
-                coating
+              <i class="item-divider fas fa-utensils"></i>
+              <div class="item-container">
+                <div class="item-name">BBQ Pork</div>
+                <div class="item-desc">
+                  Barbequed with a unique dry spice rub and followed with a honey
+                  coating
+                </div>
+                <div class="item-price">$6.50/LB</div>
               </div>
-              <div class="item-price">$6.50/LB</div>
-            </div>
-            <i class="item-divider fas fa-utensils"></i>
-            <div class="item-container">
-              <div class="item-name">BBQ Duck</div>
-              <div class="item-desc">
-                Roasted to a thin and crisp skin, with savory meat due to our
-                exclusive filling
+              <i class="item-divider fas fa-utensils"></i>
+              <div class="item-container">
+                <div class="item-name">BBQ Duck</div>
+                <div class="item-desc">
+                  Roasted to a thin and crisp skin, with savory meat due to our
+                  exclusive filling
+                </div>
+                <div class="item-price">$20.99 whole or $10.99 half</div>
               </div>
-              <div class="item-price">$20.99 whole or $10.99 half</div>
-            </div>
-            <i class="item-divider fas fa-utensils"></i>
-            <div class="item-container">
-              <div class="item-name">Red Sausage</div>
-              <div class="item-desc">
-                Made from boiled pork and boiled in our special soy sauce
+              <i class="item-divider fas fa-utensils"></i>
+              <div class="item-container">
+                <div class="item-name">Red Sausage</div>
+                <div class="item-desc">
+                  Made from boiled pork and boiled in our special soy sauce
+                </div>
+                <div class="item-price">$7.50/LB</div>
               </div>
-              <div class="item-price">$7.50/LB</div>
-            </div>
-            <i class="item-divider fas fa-utensils"></i>
-            <div class="item-container">
-              <div class="item-name">Special Chicken</div>
-              <div class="item-desc">
-                Steamed chicken that is marinated in our unique herb blend
+              <i class="item-divider fas fa-utensils"></i>
+              <div class="item-container">
+                <div class="item-name">Special Chicken</div>
+                <div class="item-desc">
+                  Steamed chicken that is marinated in our unique herb blend
+                </div>
+                <div class="item-price">$17.99 whole or $9.50 half</div>
               </div>
-              <div class="item-price">$17.99 whole or $9.50 half</div>
-            </div>
-            <i class="item-divider fas fa-utensils"></i>
-            <div class="item-container">
-              <div class="item-name">BBQ Spare Ribs</div>
-              <div class="item-desc">  
-                Barbequed in our sauce, and coated with honey afterwards
+              <i class="item-divider fas fa-utensils"></i>
+              <div class="item-container">
+                <div class="item-name">BBQ Spare Ribs</div>
+                <div class="item-desc">  
+                  Barbequed in our sauce, and coated with honey afterwards
+                </div>
+                <div class="item-price">$4.00/LB</div>
               </div>
-              <div class="item-price">$4.00/LB</div>
-            </div>
-            <i class="item-divider fas fa-utensils"></i>
-            <div class="item-container">
-              <div class="item-name">Soy Chicken</div>
-              <div class="item-desc">Boil-cooked in our soy sauce</div>
-              <div class="item-price">$11.99 whole or $6.50 half</div>
-            </div>
-            <i class="item-divider fas fa-utensils"></i>
-            <div class="item-container">
-              <div class="item-name">Soy Goose</div>
-              <div class="item-desc">Boil-cooked in our soy sauce</div>
-              <div class="item-price">$32.00 whole or $16.50 half</div>
-            </div>
-            <i class="item-divider fas fa-utensils"></i>
-            <div class="item-container">
-              <div class="item-name">Soy Chicken Leg</div>
-              <div class="item-desc">Submerged and boiled in our soy sauce</div>
-              <div class="item-price">$2.25 each</div>
-            </div>
-            <i class="item-divider fas fa-utensils"></i>
-            <div class="item-container">
-              <div class="item-name">BBQ Chicken Leg</div>
-              <div class="item-desc">
-                Barbequed with a unique dry spice rub and followed with a honey
-                coating
+              <i class="item-divider fas fa-utensils"></i>
+              <div class="item-container">
+                <div class="item-name">Soy Chicken</div>
+                <div class="item-desc">Boil-cooked in our soy sauce</div>
+                <div class="item-price">$11.99 whole or $6.50 half</div>
               </div>
-              <div class="item-price">$2.50 each</div>
-            </div>
-          </div>
+              <i class="item-divider fas fa-utensils"></i>
+              <div class="item-container">
+                <div class="item-name">Soy Goose</div>
+                <div class="item-desc">Boil-cooked in our soy sauce</div>
+                <div class="item-price">$32.00 whole or $16.50 half</div>
+              </div>
+              <i class="item-divider fas fa-utensils"></i>
+              <div class="item-container">
+                <div class="item-name">Soy Chicken Leg</div>
+                <div class="item-desc">Submerged and boiled in our soy sauce</div>
+                <div class="item-price">$2.25 each</div>
+              </div>
+              <i class="item-divider fas fa-utensils"></i>
+              <div class="item-container">
+                <div class="item-name">BBQ Chicken Leg</div>
+                <div class="item-desc">
+                  Barbequed with a unique dry spice rub and followed with a honey
+                  coating
+                </div>
+                <div class="item-price">$2.50 each</div>
+              </div>
+            </section>
+          </section>
         </div>
         <div class="card prevent-stretch combo-card">
-          <div class="card-body">
+          <section aria-label="Meals" class="card-body">
             <clipPath>
             </clipPath>
             <h3 class="card-title">Meals</h3>
@@ -151,7 +150,7 @@
             <button aria-expanded="false" class="collapse-btn btn btn-lg btn-block" type="button" data-toggle="collapse" data-target="#combo-menu">
               Show
             </button>
-          </div>
+          </section>
           <div class="collapse menu" id="combo-menu">
             <div class="item-container">
               <div class="item-name">One-Meat Combo</div>
@@ -191,7 +190,7 @@
           </div>
         </div>
         <div class="prevent-stretch card">
-          <div class="card-body">
+          <section aria-label="sides" class="card-body">
             <clipPath></clipPath>
             <h3 class="card-title">Sides</h3>
             <picture>
@@ -202,7 +201,7 @@
             <button aria-expanded="false" class="btn btn-block btn-lg collapse-btn" type="button" data-toggle="collapse" data-target="#sides-menu">
               Show
             </button>
-          </div>
+          </section>
           <div class="collapse menu" id="sides-menu">
             <div class="item-container">
               <div class="item-name">Pig Feet</div>
@@ -232,7 +231,7 @@
           </div>
         </div>
         <div class="prevent-stretch card">
-          <div class="card-body">
+          <section aria-label="catering" class="card-body">
             <clipPath>
             </clipPath>
             <h3 class="card-title">Catering</h3>
@@ -244,7 +243,7 @@
             <button aria-expanded="false" class="collapse-btn btn-lg btn btn-block" type="button" data-toggle="collapse" data-target="#cater-menu">
             Show
             </button>
-          </div>
+          </section>
           <div class="collapse menu" id="cater-menu">
             <div class="item-container">
               <div class="item-name">Roasted Suckling Pig</div>
@@ -272,7 +271,7 @@
           </div>
         </div>
     </section>
-    <section class="gallery">
+    <section aria-label="gallery" class="gallery">
       <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -333,8 +332,8 @@
         <p>Check below for our address and come in! You can also find us on UberEats.</p>
       </div>
     </section>
-    <section class="contact">
-      <a name="contactjump"></a>
+    <section aria-label="contact" class="contact">
+      <a aria-hidden="true" name="contactjump"></a>
       <div class="contact-container">
         <h1>Contact</h1>
         <div class="contact-info">
