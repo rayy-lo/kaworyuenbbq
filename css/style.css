@@ -467,10 +467,19 @@ clipPath {
   flex-direction: column;
   justify-content: center;
 }
+.contact .number {
+  margin-bottom: 0;
+}
 @media (min-width: 1024px) {
   .contact {
     font-size: 1.4em;
   }
+}
+.contact .contact-container section {
+  margin-bottom: 2em;
+}
+.contact .contact-container .email {
+  font-size: 1.1em;
 }
 @media (min-width: 1024px) {
   .contact .contact-container {
@@ -483,11 +492,6 @@ clipPath {
 .contact .contact-container .statement {
   color: #ff851b;
   font-weight: bold;
-}
-.contact .contact-container .statement2,
-.contact .contact-container .number,
-.contact .contact-container .hours {
-  margin-bottom: 1.5em;
 }
 .contact .contact-container h1 {
   color: #eeeeee;
@@ -503,23 +507,20 @@ clipPath {
 .contact .contact-container #locationheader,
 .contact .contact-container #hoursheader {
   text-transform: uppercase;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   color: #ff851b;
 }
 .contact .contact-container .days {
   font-weight: bolder;
 }
-.contact .contact-container .email {
-  color: #ff851b;
-  font-weight: bold;
-  font-family: Garamond;
-  font-size: 1.1em;
+.contact .contact-container .contact-header-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
-.contact .contact-container .email a {
-  color: #eeeeee;
-  text-decoration: underline;
+.contact .contact-container .contact-header-container i {
+  margin-right: 0.5em;
+  vertical-align: sub;
+  color: #ff851b;
 }
 
 /*# sourceMappingURL=style.css.map */

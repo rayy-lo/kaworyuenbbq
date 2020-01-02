@@ -384,11 +384,22 @@ clipPath {
   flex-direction: column;
   justify-content: center;
 
+  .number {
+    margin-bottom: 0;
+  }
+
   @include for-laptop {
     font-size: 1.4em;
   }
 
   .contact-container {
+    section {
+      margin-bottom: 2em;
+    }
+
+    .email {
+      font-size: 1.1em;
+    }
     
     @include for-laptop {
       background: #232020;  
@@ -400,12 +411,6 @@ clipPath {
     .statement {
       color: $main-color;
       font-weight: bold;
-    }
-
-    .statement2,
-    .number,
-    .hours {
-      margin-bottom: 1.5em;
     }
 
     h1 {
@@ -422,7 +427,7 @@ clipPath {
     #locationheader,
     #hoursheader {
       text-transform: uppercase;
-      margin-bottom: 1em;
+      margin-bottom: 0.5em;
       color: $main-color;
     }
 
@@ -430,17 +435,14 @@ clipPath {
       font-weight: bolder;
     }
 
-    .email {
-      color: $main-color;
-      font-weight: bold;
-      font-family: $font;
-      font-size: 1.1em;
+    .contact-header-container{
       display: flex;
-      flex-direction: column;
+      justify-content: center;
 
-      a {
-        color: #eeeeee;
-        text-decoration: underline;
+      i {
+        margin-right: 0.5em;
+        vertical-align: sub;
+        color: $main-color;
       }
     }
   }
