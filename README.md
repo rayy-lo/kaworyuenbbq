@@ -1,5 +1,7 @@
-# Ka Wor Yuen BBQ Website
+# Description
 
-Responsive website for Ka Wor Yuen BBQ [Pro Bono]
+---
 
-www.kaworyuenbbq.ca
+Static website for a Chinese BBQ restaurant. Displays general information about the restaurant and display their menu with prices.
+
+Website can be found [here](http://kaworyuenbbq.ca/).
